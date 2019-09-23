@@ -30,7 +30,6 @@ var renderCloud = function (ctx, x, y, color) {
 var renderHistogram = function (ctx, x, y) {
   ctx.fillRect(x, y, CLOUD_WIDTH - FONT_GAP, HIST_HEIGHT);
 };
-
 var getMaxElement = function (arr) {
   var maxElement = arr[0];
 
@@ -45,7 +44,6 @@ var getMaxElement = function (arr) {
 
   return maxElement;
 };
-
 var getCongratulationText = function (ctx, text, x, y) {
   ctx.fillText(text, x + FONT_GAP, y);
 };
