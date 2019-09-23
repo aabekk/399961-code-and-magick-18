@@ -16,8 +16,8 @@ var randColor = function (ctx) {
   var random = 100 * Math.random();
   ctx.fillStyle = 'hsl(240, ' + random + '%, 50%)';
 };
-var getRandomColor = function (i, ctx) {
-  if (i === 0) {
+var getRandomColor = function (names, i, ctx) {
+  if (names[i] === 'Вы') {
     ctx.fillStyle = COLOR_RED;
   } else {
     ctx.fillStyle = randColor(ctx);
@@ -76,7 +76,7 @@ window.renderStatistics = function (ctx, names, times) {
     ctx.fillStyle = COLOR_BLACK;
     ctx.fillText(names[i], textRectX, textRectY);
     ctx.fillText(timesRound, textRectX, textTimeY);
-    getRandomColor(i, ctx);
+    getRandomColor(names, i, ctx);
     ctx.fillRect(rectX, rectY, rectWidth, rectHeight);
   }
 };
