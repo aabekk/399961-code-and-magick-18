@@ -51,7 +51,6 @@ var getCongratulationText = function (ctx, text, x, y) {
 window.renderStatistics = function (ctx, names, times) {
   ctx.strokeRect(CLOUD_X + 10, CLOUD_Y + 10, CLOUD_WIDTH, CLOUD_HEIGHT);
   renderCloud(ctx, CLOUD_X + 10, CLOUD_Y + 10, 'rgba(0, 0, 0, 0.7)');
-  ctx.strokeStyle = COLOR_BLACK;
   ctx.strokeRect(CLOUD_X, CLOUD_Y, CLOUD_WIDTH, CLOUD_HEIGHT);
   renderCloud(ctx, CLOUD_X, CLOUD_Y, COLOR_WHITE);
   renderHistogram(ctx, CLOUD_X + FONT_GAP, CLOUD_Y + FONT_GAP * 3);
