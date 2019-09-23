@@ -11,6 +11,7 @@ var FONT_GAP = 20;
 var COLOR_BLACK = '#000';
 var COLOR_WHITE = '#fff';
 var COLOR_RED = 'rgba(255, 0, 0, 1)';
+var COLOR_SHADOW = 'rgba(0, 0, 0, 0.7)';
 
 var randColor = function (ctx) {
   var random = 100 * Math.random();
@@ -50,7 +51,7 @@ var getCongratulationText = function (ctx, text, x, y) {
 
 window.renderStatistics = function (ctx, names, times) {
   ctx.strokeRect(CLOUD_X + 10, CLOUD_Y + 10, CLOUD_WIDTH, CLOUD_HEIGHT);
-  renderCloud(ctx, CLOUD_X + 10, CLOUD_Y + 10, 'rgba(0, 0, 0, 0.7)');
+  renderCloud(ctx, CLOUD_X + 10, CLOUD_Y + 10, COLOR_SHADOW);
   ctx.strokeRect(CLOUD_X, CLOUD_Y, CLOUD_WIDTH, CLOUD_HEIGHT);
   renderCloud(ctx, CLOUD_X, CLOUD_Y, COLOR_WHITE);
   renderHistogram(ctx, CLOUD_X + FONT_GAP, CLOUD_Y + FONT_GAP * 3);
